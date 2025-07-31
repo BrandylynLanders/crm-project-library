@@ -112,3 +112,8 @@ Z_Archive / 2023 Queries
 - **Use `TEST_`** for any experimentation to avoid disrupting active workflows.  
 - **Clone first** if unsure—never edit live queries in production.  
 - **Archive regularly** to reduce visual clutter and risk of editing retired queries.
+
+- ---
+**Navigation:**  
+⬅ [Back to General Principles](SlateNamingGuide.md) | ➡ [Next: Deliver / Email](SlateDeliver.md)
+
