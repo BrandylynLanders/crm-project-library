@@ -74,9 +74,9 @@ Z_UG_COB_Yield_2023
 ---
 **Next Sections:**  
 - Module-Specific Naming Rules for  
-1. **Queries**  
-2. **Deliver/Email**  
-3. **Events**  
-4. **Forms**  
-5. **Portals**  
-6. **Organizations**  
+- [Queries](Queries.md)  
+- [Deliver / Email](Deliver_Email.md)  
+- [Events](Events.md)  
+- [Forms](Forms.md)  
+- [Portals](Portals.md)  
+- [Organizations](Organizations.md) 
