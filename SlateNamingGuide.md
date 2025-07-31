@@ -1,4 +1,3 @@
-
 # Slate File Naming Guide  
 **Section 1: General Principles**
 
@@ -36,7 +35,7 @@ INT = Internal (Staff / Faculty)
 UNI = All-University
 
 ### **Combine with Division or Program**
-- `GR_FCOM` = Graduate – Frist College of Medicine  
+- `GR_COM` = Graduate – College of Medicine  
 - `GR_CPHS` = Graduate – College of Pharmacy & Health Sciences  
 - `UG_COB`  = Undergraduate – College of Business  
 
@@ -45,15 +44,15 @@ UNI = All-University
 - Append **YYYYMMDD** to items that repeat or are time‑sensitive.  
 - Ensures **chronological sorting** in Slate’s flat folder structure.  
 - Example:  
-GR_FCOM_CampusTour_20250926
+GR_COM_CampusTour_20250926
 EMAIL_UG_COB_Yield_01_Welcome_20250805
 
 ---
 ## 1.5 Use Two-Digit Sequence Numbers for Multi-Step Processes
 - For campaigns or series of steps, use **01, 02, 03** to keep items in order.  
 - Example:  
-EMAIL_GR_FCOM_Interview_01_Invite_20250930
-EMAIL_GR_FCOM_Interview_02_Reminder_20251005
+EMAIL_GR_COM_Interview_01_Invite_20250930
+EMAIL_GR_COM_Interview_02_Reminder_20251005
 
 ---
 ## 1.6 Archiving & Cleanup
