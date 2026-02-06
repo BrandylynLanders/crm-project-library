@@ -1,0 +1,41 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brandylyn Landers</title>
+    <!-- Optional: keep if you want Montserrat -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <style type="text/css">/* Minimal, neutral shell for this portal only */
+    :root{
+      --bg:#F5F7FB;
+      --ink:#121826;
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    /* Give your NFC card room and center it */
+    .portal-shell{
+      min-height: 100vh;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      padding: 28px 16px 40px;
+    }
+
+    /* Prevent inherited Slate styles from shrinking/offsetting your content */
+    .portal-shell * { box-sizing: border-box; }
+    </style>
+  </head>
+  <body>
+    <div class="portal-shell">
+      {{content}}
+    </div>
+  </body>
+</html>

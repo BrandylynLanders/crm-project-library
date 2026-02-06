@@ -1,0 +1,349 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brandylyn Landers</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <style type="text/css">:root {
+        --navy: #002147;
+        --crimson: #b21029;
+
+        --ink: #121826;
+        --muted: #5b6475;
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --line: rgba(18, 24, 38, 0.1);
+
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --radius: 16px;
+
+        /* One source of truth for the gradient */
+        --grad: linear-gradient(90deg, var(--navy), var(--crimson));
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        color: var(--ink);
+        background: radial-gradient(
+            1200px 800px at 20% -10%,
+            rgba(0, 33, 71, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 110% 10%,
+            rgba(178, 16, 41, 0.08),
+            transparent 55%
+          ),
+          linear-gradient(180deg, var(--bg), #ffffff 65%);
+        padding: 28px 16px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 430px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Subtle tech grid */
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.035) 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(120% 80% at 50% 0%, #000 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .topbar {
+        height: 8px;
+        background: var(--grad);
+      }
+
+      .content {
+        position: relative;
+        padding: 20px 18px 18px;
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .avatar {
+        width: 132px;
+        height: 132px;
+        border-radius: 18px;
+        object-fit: cover;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+        background: #fff;
+      }
+
+      h1 {
+        margin: 6px 0 0;
+        font-size: 1.55rem;
+        line-height: 1.15;
+        font-weight: 700;
+        color: var(--navy);
+        letter-spacing: 0.2px;
+      }
+
+      .role {
+        margin: 2px 0 0;
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .meta {
+        margin: 2px 0 0;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+
+      .tagline {
+        margin: 14px auto 0;
+        max-width: 36ch;
+        font-size: 0.95rem;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .divider {
+        height: 1px;
+        background: rgba(18, 24, 38, 0.1);
+        margin: 16px 0;
+      }
+
+      .kv {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .pill {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        border: 1px solid rgba(18, 24, 38, 0.1);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(4px);
+        text-align: center;
+      }
+
+      .pill a {
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      /* Buttons: gradient like the topbar */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(18, 24, 38, 0.12);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.98rem;
+        line-height: 1;
+        user-select: none;
+
+        color: #fff;
+        background: var(--grad);
+        background-size: 200% 200%;
+        background-position: 0% 50%;
+        box-shadow: 0 10px 18px rgba(0, 33, 71, 0.12);
+
+        transition: background-position 180ms ease, transform 40ms ease,
+          box-shadow 180ms ease, filter 180ms ease;
+      }
+
+      .btn:hover {
+        background-position: 100% 50%;
+        box-shadow: 0 14px 26px rgba(0, 33, 71, 0.16);
+        filter: saturate(1.05);
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      /* If you want subtle variety without losing the gradient, tint per class */
+      .btn-primary {
+        border-color: rgba(0, 33, 71, 0.35);
+      }
+      .btn-accent {
+        border-color: rgba(178, 16, 41, 0.35);
+      }
+      .btn-ghost {
+        border-color: rgba(18, 24, 38, 0.18);
+      }
+      
+      /* Buttons: keep text white always (normal, hover, visited) */
+      .btn,
+      .btn:link,
+      .btn:visited,
+      .btn:hover,
+      .btn:active,
+      .btn:focus {
+        color: #fff !important;
+        -webkit-text-fill-color: #fff; /* helps on some mobile/Safari cases */
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        border: 1px solid rgba(18, 24, 38, 0.12);
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background 150ms ease;
+      }
+
+      .icon:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      .icon svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--ink);
+      }
+
+      .foot {
+        margin-top: 14px;
+        text-align: center;
+        color: rgba(91, 100, 117, 0.95);
+        font-size: 0.8rem;
+      }
+
+      /* Accessibility */
+      a:focus-visible {
+        outline: 3px solid rgba(0, 102, 204, 0.35);
+        outline-offset: 2px;
+        border-radius: 12px;
+      }
+
+      /* Respect reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+    <section class="card">
+    <div class="topbar">
+    </div>
+
+    <div class="content">
+      <div class="profile">
+        <img alt="Brandylyn Landers" class="avatar" src="https://media.licdn.com/dms/image/v2/D4E03AQFznBHdeSQsWA/profile-displayphoto-scale_400_400/B4EZqw2XKBIQAg-/0/1763903636556?e=2147483647&amp;v=beta&amp;t=d_0qQNyLHX55nmfQMIV-J28xMr3zksGYlbY_H8U-fos" />
+        <h1>
+          Brandylyn Landers
+        </h1>
+
+        <div class="role">
+          CRM Specialist | Belmont University
+        </div>
+
+        <div class="meta">
+          Nashville, Tennessee, USA
+        </div>
+
+        <p class="tagline">
+          Strategic Systems &amp; Operations Leader | Building Scalable, People-Centered Solutions Through CRM
+        </p>
+      </div>
+
+      <div class="divider">
+      </div>
+
+      <ul class="kv">
+        <li class="pill">
+          <a href="tel:+16154608201">(615) 460-8201</a>
+        </li>
+        <li class="pill">
+          <a href="tel:+19413761290">(941) 376-1290 mobile</a>
+        </li>
+        <li class="pill">
+          <a href="mailto:brandylyn.landers@belmont.edu">brandylyn.landers@belmont.edu</a>
+        </li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn btn-primary" download="BrandylynLanders.vcf" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ABrandylyn%20Landers%0ATITLE%3ACRM%20Specialist%20%7C%20Belmont%20University%0AORG%3ABelmont%20University%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B1%20615%20460%208201%0AEMAIL%3BTYPE%3DINTERNET%3Abrandylyn.landers%40belmont.edu%0AADR%3BTYPE%3DWORK%3A%3B%3B%3BNashville%3BTN%3B%3BUSA%0AURL%3Ahttps%3A%2F%2Fwww.belmont.edu%2Fprofiles%2Fbrandylyn-landers%2F%0AEND%3AVCARD">Save Contact</a><a class="btn btn-accent" href="mailto:brandylyn.landers@belmont.edu?subject=Hello%20Brandylyn">Send Email</a><a class="btn btn-ghost" href="https://appt.link/meet-with-brandylyn-landers-QOMMwqcX" rel="noopener" target="_blank">Book Time</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/brandylynlanders/" rel="noopener" target="_blank">Connect</a>
+      </div>
+
+      <div class="links">
+        <a class="icon" href="https://www.linkedin.com/in/brandylynlanders/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.66-1.85 3.41-1.85 3.64 0 4.31 2.4 4.31 5.52v6.22zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"></path></svg></a><a class="icon" href="https://github.com/BrandylynLanders" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.8-.25.8-.56v-2.05c-3.26.7-3.95-1.4-3.95-1.4-.53-1.33-1.3-1.68-1.3-1.68-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11 11 0 0 1 5.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.75.82 1.2 1.87 1.2 3.15 0 4.49-2.75 5.48-5.37 5.77.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"></path></svg></a><a aria-label="Belmont University" class="icon" href="https://www.belmont.edu" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm7.93 9h-3.17a15.2 15.2 0 0 0-1.1-5 8.03 8.03 0 0 1 4.27 5zM12 4c.9 0 2.26 1.78 3.05 7H8.95C9.74 5.78 11.1 4 12 4zM4.07 11a8.03 8.03 0 0 1 4.27-5 15.2 15.2 0 0 0-1.1 5H4.07zm0 2h3.17a15.2 15.2 0 0 0 1.1 5 8.03 8.03 0 0 1-4.27-5zM12 20c-.9 0-2.26-1.78-3.05-7h6.1C14.26 18.22 12.9 20 12 20zm3.66-.99a15.2 15.2 0 0 0 1.1-5h3.17a8.03 8.03 0 0 1-4.27 5z"></path></svg></a>
+      </div>
+
+      <div class="foot">
+        Tap “Save to Contacts” for a one-step add on iPhone/Android.
+      </div>
+    </div>
+    </section>
+    </main>
+  </body>
+</html>
