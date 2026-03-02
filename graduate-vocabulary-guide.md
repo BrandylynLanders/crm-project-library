@@ -113,10 +113,14 @@ Graduate applicants select a defined admissions pathway tied to curriculum, facu
 
 ---
 
-## 2.3 Degree Type
+## 2.3 Intended Degree Level
+
+**Field Label:** Intended Degree Level  
 
 **Definition**  
-A classification layer used for reporting and filtering.
+The classification of the graduate credential the applicant intends to pursue.
+
+This field is forward-looking and reflects the credential associated with the Program of Interest.
 
 **Examples**
 - Master’s Degree  
@@ -124,8 +128,74 @@ A classification layer used for reporting and filtering.
 - Professional Degree  
 - Graduate Certificate  
 
-This field does not replace Program of Interest.
+**Purpose**
+- Funnel segmentation  
+- Workflow routing  
+- Marketing communication targeting  
+- High-level reporting by credential category  
 
+**Important**  
+This field does *not* capture prior education.
+
+---
+
+## 2.4 Highest Degree Earned
+
+**Field Label:** Highest Degree Earned  
+
+**Definition**  
+The highest academic credential the applicant has completed at the time of application.
+
+This field is backward-looking and reflects academic background.
+
+**Examples**
+- Bachelor’s Degree  
+- Master’s Degree  
+- Professional Degree  
+- Associate Degree  
+- No Degree Completed  
+
+**Purpose**
+- Eligibility determination  
+- Accreditation reporting  
+- Transcript requirement logic  
+- Compliance documentation  
+
+---
+
+## Terminology Governance Rule
+
+The term **“Degree Type” is prohibited without modifier.**
+
+All references to degree classification must specify one of the following:
+
+- **Intended Degree Level** (forward-looking, application intent)  
+- **Highest Degree Earned** (backward-looking, academic history)
+
+Unmodified use of “Degree Type” creates ambiguity, reporting inconsistency, and integration risk across Slate, Salesforce, and Marketing systems.
+
+---
+
+## Conceptual Hierarchy (Graduate Context)
+
+For clarity, graduate enrollment fields follow this structure:
+
+1. **Program of Interest**  
+   → Specific admissions pathway (e.g., MS Data Analytics)
+
+2. **Intended Degree Level**  
+   → Master’s / Doctoral / Certificate
+
+3. **Intended Start Term**  
+   → Fall 2026
+
+4. **Highest Degree Earned**  
+   → Bachelor’s Degree
+
+5. **Current Level of Study**  
+   → Senior (Bachelor’s in Progress)
+
+Each field answers a distinct question and must not be combined or conflated.
 ---
 
 # 3. Enrollment Timing & Entry Terms
